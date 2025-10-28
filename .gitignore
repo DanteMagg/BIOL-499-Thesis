@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pdb
+*.log
+.DS_Store
+.env
+.ipynb_checkpoints/
+.vscode/
+*.out
+*.tmp
+*.bak
+results/
+data/structures/
