@@ -1,6 +1,5 @@
 __pycache__/
 *.pyc
-*.pdb
 *.log
 .DS_Store
 .env
@@ -10,4 +9,3 @@ __pycache__/
 *.tmp
 *.bak
 results/
-data/structures/
