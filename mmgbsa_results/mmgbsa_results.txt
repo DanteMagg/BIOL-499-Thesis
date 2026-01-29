@@ -1,0 +1,22 @@
+MM/GBSA Binding Energy Results
+==================================================
+
+Input: model_01.pdb
+Chain R: TNFR1 (receptor)
+Chain A: H-SN1 (peptide)
+Force field: amber99sb + GB-OBC2
+Temperature: 298.15 K
+
+Component Energies (kcal/mol):
+  E(complex)  = -5782.91
+  E(receptor) = -4805.09
+  E(peptide)  = -913.80
+
+Predicted Binding Energy:
+  ΔG_bind (MM/GBSA) = -64.02 kcal/mol
+
+Experimental Reference (KD = 32 μM):
+  ΔG_exp = RT ln(KD) = -6.13 kcal/mol
+
+Scale Factor:
+  ΔG_exp / ΔG_pred = 0.0958

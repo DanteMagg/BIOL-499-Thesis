@@ -1,0 +1,30 @@
+Alanine Scanning Mutant Summary
+========================================
+
+Input: model_01.pdb
+Mutants generated: 23
+
+Position → ALA mutations:
+   1. ASP (D) → ALA (A)
+   2. GLU (E) → ALA (A)
+   3. GLN (Q) → ALA (A)
+   4. HIS (H) → ALA (A)
+   5. LEU (L) → ALA (A)
+   6. GLU (E) → ALA (A)
+   7. THR (T) → ALA (A)
+   8. GLU (E) → ALA (A)
+   9. LEU (L) → ALA (A)
+  10. HIS (H) → ALA (A)
+  11. THR (T) → ALA (A)
+  12. HIS (H) → ALA (A)
+  13. LEU (L) → ALA (A)
+  14. THR (T) → ALA (A)
+  15. SER (S) → ALA (A)
+  16. VAL (V) → ALA (A)
+  17. LEU (L) → ALA (A)
+  18. THR (T) → ALA (A)
+  19. ALA (A) → ALA (A)
+  20. ASN (N) → ALA (A)
+  21. GLY (G) → ALA (A)
+  22. PHE (F) → ALA (A)
+  23. GLN (Q) → ALA (A)
