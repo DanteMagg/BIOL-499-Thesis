@@ -1,0 +1,94 @@
+ PyMOL(TM) Molecular Graphics System, Version 3.1.0.
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+ 
+    Created by Warren L. DeLano, Ph.D. 
+ 
+    PyMOL is user-supported open-source software.  Although some versions
+    are freely available, PyMOL is not in the public domain.
+ 
+    If PyMOL is helpful in your work or study, then please volunteer 
+    support for our ongoing efforts to create open and affordable scientific
+    software by purchasing a PyMOL Maintenance and/or Support subscription.
+
+    More information can be found at "http://www.pymol.org".
+ 
+    Enter "help" for a list of commands.
+    Enter "help <command-name>" for information on a specific command.
+
+ Hit ESC anytime to toggle between text and graphics.
+
+HEADER                                            22-JAN-26   XXXX
+ CmdLoad: "" loaded as "flexpepdock".
+HEADER    COMPLEX(LYMPHOKINE/RECEPTOR)            09-MAY-94   1TNR
+TITLE     CRYSTAL STRUCTURE OF THE SOLUBLE HUMAN 55 KD TNF RECEPTOR-HUMAN TNF-
+TITLE    2 BETA COMPLEX: IMPLICATIONS FOR TNF RECEPTOR ACTIVATION
+COMPND    MOL_ID: 1;
+COMPND   2 MOLECULE: TUMOR NECROSIS FACTOR BETA;
+COMPND   3 CHAIN: A;
+COMPND   4 ENGINEERED: YES;
+COMPND   5 MOL_ID: 2;
+COMPND   6 MOLECULE: TUMOR NECROSIS FACTOR RECEPTOR P55;
+COMPND   7 CHAIN: R;
+COMPND   8 ENGINEERED: YES
+ ObjectMolecule: Read secondary structure assignments.
+ ObjectMolecule: Read crystal symmetry information.
+ CmdLoad: "" loaded as "zheng".
+ Match: read scoring matrix.
+ Match: assigning 162 x 61 pairwise scores.
+ MatchAlign: aligning residues (162 vs 61)...
+ MatchAlign: score 357.000
+ ExecutiveAlign: 479 atoms aligned.
+ ExecutiveRMS: 33 atoms rejected during cycle 1 (RMSD=1.95).
+ ExecutiveRMS: 33 atoms rejected during cycle 2 (RMSD=1.36).
+ ExecutiveRMS: 27 atoms rejected during cycle 3 (RMSD=1.09).
+ ExecutiveRMS: 17 atoms rejected during cycle 4 (RMSD=0.92).
+ ExecutiveRMS: 9 atoms rejected during cycle 5 (RMSD=0.83).
+ Executive: RMSD =    0.792 (360 to 360 atoms)
+ Executive: RMSD =    0.673 (183 to 183 atoms)
+ Executive: Colored 355 atoms.
+ Executive: Colored 2094 atoms.
+ Setting: transparency set for 2094 atoms in object "flexpepdock".
+ Executive: Colored 1082 atoms.
+ Selector: selection "crd23" defined with 1413 atoms.
+ Executive: Colored 643 atoms.
+ Executive: Colored 291 atoms.
+ Label: labelled 1 atoms.
+ Setting: ray_shadow set to off.
+ Ray: render time: 0.60 sec. = 6033.8 frames/hour (0.60 sec. accum.).
+ ScenePNG: wrote 1200x800 pixel image to file "rmsd_validation_flexpepdock_vs_1TNR.png".
+ Detected 14 CPU cores.  Enabled multithreaded rendering.
+PyMOL>reinitialize
+PyMOL>load rosie-51675.flex_input_A_R_refinement/output/model_01.pdb, flexpepdock
+PyMOL>load data/structures/1TNR_clean.pdb, zheng
+PyMOL>align flexpepdock and (chain A or chain R), zheng and resi 80-140
+PyMOL>rms_cur flexpepdock and chain R and resi 80-140 and name N+CA+C, zheng and chain R and resi 80-140 and name N+CA+C
+PyMOL>print "="*60
+============================================================
+PyMOL>print "RMSD Validation: FlexPepDock vs 1TNR Crystal Structure"
+RMSD Validation: FlexPepDock vs 1TNR Crystal Structure
+PyMOL>print "="*60
+============================================================
+PyMOL>hide everything
+PyMOL>show cartoon, flexpepdock and chain A
+PyMOL>color cyan, flexpepdock and chain A
+PyMOL>show surface, flexpepdock and chain R
+PyMOL>color wheat, flexpepdock and chain R
+PyMOL>set transparency, 0.3, flexpepdock and chain R
+PyMOL>show cartoon, zheng and chain R
+PyMOL>color gray70, zheng and chain R
+PyMOL>select crd23, resi 80-140
+PyMOL>show sticks, crd23 and flexpepdock
+PyMOL>util.cbag crd23 and flexpepdock
+PyMOL>label flexpepdock and chain A and name CA and resi 1, "H-SN1 N-term"
+PyMOL>bg_color white
+PyMOL>set ray_shadows, 0
+PyMOL>zoom flexpepdock
+PyMOL>ray 1200, 800
+PyMOL>png rmsd_validation_flexpepdock_vs_1TNR.png, dpi=300
+PyMOL>print "="*60
+============================================================
+PyMOL>print "Image saved: rmsd_validation_flexpepdock_vs_1TNR.png"
+Image saved: rmsd_validation_flexpepdock_vs_1TNR.png
+PyMOL>print "="*60
+============================================================
